@@ -1,0 +1,34 @@
+Q1
+
+makeFirst(node, sequence){
+	node.getPrev.setNext(node.getNext)
+	node.getNext.setPrev(node.getPrev)
+	header.next.setPrev(node)
+	node.setNext(header.next)
+	node.setPrev(header)
+	header.setNext(node)
+}
+
+//This changes the links of the nodes to point each node to an order such that the parameter node is in front but the rest of the list is unchanged
+
+Q2
+
+recurFind(sequence, element, node){
+	if (node.value == element)
+		return 0;
+	else if (node = seqeunce.getLast)
+		throw exception - it's not in the sequence
+	else 
+		return 1 + recurFine(sequence, element, node.next)
+}
+
+//Each recursion checks the node it was passsed and calls the next node in the sequence if it doesn't find it incrementing to track position
+
+Q3
+
+Minimum - 0
+Maximum n-1
+
+Example:
+
+if we had three elements, and a k of 1, we'd make three accesses. If we accessed them all 1 time no element would be accessed <k. If we stacked our accesses on the same element the other 2 (n-1) would be accessed less than k

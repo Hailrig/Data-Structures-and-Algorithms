@@ -1,0 +1,33 @@
+Q1.
+
+array flyers
+heap temp
+array output
+
+temp = flyers.bottomUpMax  //use bottom up heap construction, with the biggest number at the root. will create a heap in O(n) time
+
+for (i = 0; i < log(n); i++){ //loop log(n) times
+	output.add(temp.remove) //takes log(n) time to remove and resort a heap
+}
+
+return output
+
+// This takes O(n) to build the heap, and then will return the top and resort (which takes log(n) time) and repeats that process log(n) times. Thus,
+//n + log(n)*log(n). log(n)*log(n) + n is O(n) because the logns aren't significant compared to the n for large inputs
+
+Q2.
+
+array ints
+heap temp
+
+temp = ints.bottomUpMin //use bottom up heap construction, with the smallest number at the root. O(n) time
+
+for (i = 0; i < k; i++){ //loop k times
+	if (i = k-1)
+		return temp.min
+	else
+		temp.remove //remvoe is O(log n)
+}
+
+//This takes O(n) to build the heap, and then will pop elements off heap in log(n) time, repeating the process k times. Thus,
+//O(n + klog(n))
