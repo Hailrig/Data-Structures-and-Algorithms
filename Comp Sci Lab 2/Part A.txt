@@ -1,0 +1,6 @@
+Constructor of the Super class called
+Car number: 10
+No of Tyres: 5
+accessories: true
+Brand: X
+Number of Vehicles: 1

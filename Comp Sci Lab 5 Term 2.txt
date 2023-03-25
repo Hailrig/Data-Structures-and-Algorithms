@@ -1,0 +1,22 @@
+inOrderStack{
+	Stack stack
+	list output
+	cursor = root
+	
+	while(cursor.left != null || !stack.isEmpty){
+		if (cursor != null)
+			stack.push(cursor)
+		if (cursor.left != null)
+			cursor = cursor.left
+		else{
+			exitValue = stack.pop
+			output.add(exitValue.element)
+			if (exitValue.right != null)
+				cursor = exitValue.right
+			else
+				cursor = null
+		}
+	}
+}
+
+//This was probably the algorithm analysis question I found the toughest, realizing that I needed to grab the right node of the thing I was taking off the stack took a while. But I think this would work?

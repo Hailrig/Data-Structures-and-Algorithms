@@ -1,0 +1,31 @@
+deepP = depth(p)
+deepQ = depth(q)
+
+while (deepP != deepQ){
+	if (deepP < deepQ){
+		deepQ--
+		q=q.previous
+	}else (deepP > deepQ){
+		deepP--
+		p=p.previous
+	}
+}
+
+while (p != q){
+	p=p.previous
+	q=q.previous
+}
+
+return p
+
+depth(node){
+	cursor = node
+	h = 0
+	while (cursor != root){
+		h++;
+		cursor = cursor.previous
+	}
+	return h
+}
+
+O(n) where n is the maximum height of the tree

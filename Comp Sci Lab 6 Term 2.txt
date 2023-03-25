@@ -1,0 +1,16 @@
+newInsertion(node){
+	childNode = node
+	if (node.pos != 1){
+		parentNode = childNode.position / 2 //to get the pos of the parent
+		while (parentNode.position*2 != childNode.position){ //looking for left child or root node
+			childNode = parentNode
+			parentNode = childNode.position / 2 //to get the pos of the parent
+		}
+		downNode = (parentNode.position*2)+1
+	}else
+		return 2 //there is only the root node in the tree
+	while (downNode != null){
+		downNode = downNode.position*2
+	}
+	return downNode
+}
